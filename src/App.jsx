@@ -1,4 +1,5 @@
 import iconStar from "./assets/icon-star.svg"
+import imagemobg from "./assets/illustration-thank-you.svg";
 import { useState } from "react"
 export function App(){
   const [submited, setSubmited] = useState(false)
@@ -17,8 +18,7 @@ function handleChangeRateNote(value){
 }
 
   return(
-    <div className="h-svh bg-very-dark-blue text-white flex justify-center items-center px-6">
-      {submited === false ? (
+      submited === false ? (
               <div className="bg-radial-gradient max-w-103 px-6 pt-6 pb-8 rounded-2xl font-overpass">
               <div className="bg-dark-blue p-4 w-fit rounded-full mb-4">
                 <img src={iconStar} alt="icone da estrela" />
@@ -37,8 +37,11 @@ function handleChangeRateNote(value){
              <button className="bg-orange w-full py-3 rounded-3xl uppercase font-bold tracking-1" onClick={handleSubmit}>Submit</button>
                 </div>
       ): (
-        <p>outro código</p>
-      )}
-    </div>
+        <div className="bg-radial-gradient max-w-103 px-6 pt-6 pb-8 rounded-2xl font-overpass">
+          <img src={imagemobg} alt="imagem gratiluz" />
+
+          <p></p>
+        </div>
+      )
   )
 }
