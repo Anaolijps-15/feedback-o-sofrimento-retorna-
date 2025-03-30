@@ -37,10 +37,13 @@ function handleChangeRateNote(value){
              <button className="bg-orange w-full py-3 rounded-3xl uppercase font-bold tracking-1" onClick={handleSubmit}>Submit</button>
                 </div>
       ): (
-        <div className="bg-radial-gradient max-w-103 px-6 pt-6 pb-8 rounded-2xl font-overpass">
-          <img src={imagemobg} alt="imagem gratiluz" />
+        <div className="bg-radial-gradient max-w-103 px-6 pt-6 pb-8 rounded-2xl font-overpass texte-center">
+          <img className="mx-auto mb-6" src={imagemobg} alt="imagem gratiluz" />
 
-          <p></p>
+          <p className="mb-6 texte-orange bg-dark-blue w-fit mx-auto px-3 py-1.25 rounded-3xl">You selected {rateNote} out of 5</p>
+
+          <h1 className="font-bold text-2xl mb-2.5">Thank You!</h1> 
+          <p className="light-grey text-sm leading-1 ">We appreciate you taking the time to give a rating. If you ever need more support, don’t hesitate to get in touch!</p>
         </div>
       )
   )
